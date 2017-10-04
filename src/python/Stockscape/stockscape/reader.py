@@ -26,6 +26,7 @@ def _raw_read_shiller_data(path):
     df.columns = df.iloc[5]
     df.columns.name = None
     # Strip the textual header and tail of the data
+    # TODO: Make this more robust: the number of empty rows at the end of the file varies between versions.
     df = df.iloc[6:-1, :]
     df.index = (df.index - 6)
     df['date_dt'] = pd.Series(df.index).apply(ie_index_to_datetime)
