@@ -4,4 +4,6 @@ A repository of tools for analyzing stock prices using data from [Robert Shiller
 
 # Analyses
 
-* [DeLong-Shiller Redux](analysis/jupyter/DeLong-Shiller-Redux.ipynb)
+| Analysis | Just Text | Text + Code |
+| -------- | --------- | ----------- |
+| DeLong-Shiller Redux | [text](analysis/text/DeLong-Shiller-Redux/DeLong-Shiller-Redux.md) |  [notebook](analysis/jupyter/DeLong-Shiller-Redux.ipynb)|
