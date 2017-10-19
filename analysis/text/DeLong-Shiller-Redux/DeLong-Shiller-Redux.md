@@ -3,11 +3,11 @@
 
 I was 21 when I graduated from university and started my first full-time job. One benefit offered by my employer was a 401(k) with matching contributions. At the time, I was not thinking much about planning for retirement, but everyone told me I should take advantage and invest at least the matched amount, so I followed this advice. As I tried to structure my portfolio, I was faced with a dilemma: on the one hand, I knew that the younger you are, the more you should invest in stocks, but on the other hand, Alan Greenspan had recently given his "irrational exuberance" speech. Should I ignore the Chairman of the Federal Reserve's admonition and invest in stocks anyway, or was there a more prudent strategy?
 
-While going back and forth about the options in my mind, I remembered the efficient-market hypothesis, which had come up as a casual aside by one of my mathematics professors in college. I did not even think to know what exactly it meant, but I took it to imply that it is not possible to time the stock market. That for me was the conclusive argument that convinced me to ignore Greenspan and build a stock-heavy portfolio.
+While considering the options, I remembered the efficient-market hypothesis, which had come up as a casual aside by one of my mathematics professors in college. I did not even think to know what exactly it meant, but I took it to imply that it is not possible to time the stock market. That for me was the conclusive rationalization that convinced me to ignore Greenspan and build a stock-heavy portfolio.
 
-Fast-forward 20 years later to today. The value of those investments did go down for a period of time (dot-com crash) and later went back up. Given my conundrum beforehand, I've never stopped wondering if that roller-coaster ride was necessary. Could I have achieved better returns if I had paid more attention to Greenspan? But since I know almost nothing about economics or finance, I had no idea how to investigate this question.
+Fast-forward 20 years later to today. My first foray into investing turned out to be somewhat of a roller-coaster ride: the value of my 401(k) portfolio did initially go up, but then was in the red for a period of time before eventually returning to positive territory. Given my conundrum in planning my initial investment, I've never stopped wondering if I could not have achieved better returns, not to mention a smoother ride, if I had paid more attention to Greenspan. But since I knew almost nothing about economics or finance, I had no idea how to investigate this question.
 
-In the summer of 2014, Robert Shiller and Brad DeLong had a public discussion which touched upon exactly these things that were relevant to me as I struggled with my first foray into investing. Nobel Laureate Robert Shiller, who participated in coining the phrase *[irrational exuberance](https://en.wikipedia.org/wiki/Irrational_exuberance)*, argued in an  [Upshot article in the New York Times](http://www.nytimes.com/2014/08/17/upshot/the-mystery-of-lofty-elevations.html?_r=0) that there is a way to measure if stocks are relatively expensive: the cyclically adjusted price-earnings, or CAPE, ratio. Furthermore, he claims, if the value of this ratio is above 25, a major market drop is probably brewing.
+Then, in the summer of 2014, Robert Shiller and Brad DeLong had a public discussion which delved into exactly the issues that were relevant to me as I struggled with my 401(k). Nobel Laureate Robert Shiller, who participated in coining the phrase *[irrational exuberance](https://en.wikipedia.org/wiki/Irrational_exuberance)*, argued in an  [Upshot article in the New York Times](http://www.nytimes.com/2014/08/17/upshot/the-mystery-of-lofty-elevations.html?_r=0) that there is a way to measure if stocks are relatively expensive: the cyclically adjusted price-earnings, or CAPE, ratio. Furthermore, he claims, if the value of this ratio is above 25, a major market drop is probably brewing.
 
 Further insight came from Brad DeLong, [who blogged a response](http://delong.typepad.com/sdj/2014/08/under-what-circumstances-should-you-worry-that-the-stock-market-is-too-high-the-honest-broker-for-the-week-of-august-16.html). In formulating his response, he provides a clear interpretation of what CAPE measures and offers historical context and additional tools for interpreting and analyzing stock price movements. His article, written in 2014, begins by looking at the most recent peak of the CAPE ratio, which was then in 2007. He writes, "...we find that we cannot calculate a ten-year return for the 2007 CAPE peak of 27.54--we still have three years to go." Those three years have in the meantime transpired, and we now have the data necessary to calculate the ten-year return for May 2007, when the aforementioned peak occurred. This seems like a good time to revisit the DeLong-Shiller argument.
 
@@ -79,9 +79,10 @@ On closer inspection, it looks like our model does not conform to reality at hig
 ![png](output_20_0.png)
 
 
-Performing a regression, we get a line that crosses the y-axis at `CAPE=26.88`, meaning that our regression model predicts that bonds should perform better than stocks for CAPE greater than this value. And if you, like me, are weary of giving too much weight the very few periods in which CAPE has been above 25, we can also we discard the data for `CAPE >= 25` and perform the same regression. Surprisingly (to me, at least), we get a very similar line, but this time with the x-intercept at `CAPE=25.94`. Maybe there is something to this CAPE 25 threshold...
+Performing a regression, we get a line that crosses the y-axis at `CAPE=26.97`, meaning that our regression model predicts that bonds should perform better than stocks for CAPE greater than this value. And if you, like me, are weary of giving too much weight the very few periods in which CAPE has been above 25, we can also we discard the data for `CAPE >= 25` and perform the same regression. Surprisingly (to me, at least), we get a very similar line, but this time with the x-intercept at `CAPE=25.94`. Maybe there is something to this CAPE 25 threshold...
 
 So it looks like there is at least a weak relationship between CAPE and the relative attractiveness of stocks and bonds. For comparison, we can look at another variable like inflation. Does inflation play a role in returns?
+
 
 ![png](output_22_0.png)
 
@@ -112,7 +113,7 @@ The warranted-returns model seems to perform better at longer time horizons; the
 
 Over most 10, 15, and 20-year periods, the stock market yields positive returns. One of the issues DeLong raises with CAPE is that there are periods in which CAPE is low, but the market returns over 10 years are nevertheless negative. And the same is true for 15-year returns over certain periods as well.
 
-The reassuring news is that even in these periods, staying in the market longer has eventually brought real returns back into positive territory. But CAPE does not seem to offer insight into when a loss period is coming: these periods have occurred at across a wide range of CAPE levels, not just at CAPE >= 25. And in many cases, the gross returns do go back to close to the the warranted returns curve in later time horizons.
+The reassuring news is that for periods in which 10 or 15-year returns are negative, staying in the market longer has eventually brought real returns back into positive territory. And in many cases, the returns even go back to near the warranted returns curve in later time horizons.
 
 
 ![png](output_31_0.png)
@@ -138,11 +139,11 @@ Doing this, we see that waiting is, in aggregate, a losing strategy. But there i
 ![png](output_35_0.png)
 
 
-# September 2017
+# October 2017
 
-And what about today, September 2017? Robert Shiller has been in the media arguing that the market is overpriced (e.g., http://businessinsider.com/robert-shiller-stock-market-overpriced-2017-3).
+And what about today, October 2017? Earlier this year, Robert Shiller was in the media arguing that the market is overpriced (e.g., http://businessinsider.com/robert-shiller-stock-market-overpriced-2017-3).
 
-Past performance is not an indicator of future performance. Nonetheless, we can see what past performance at today's CAPE levels would yield. We have earnings data up to the end of Q2 2017 and using that, we can compute CAPE and try the following impossibly naïve model: for a current CAPE value (on for which we do not yet have returns data), take the 19 closest values in the past and average these to get a prediction. This is of course not how machine learning should be done. You should estimate parameters, do cross validation, etc. Still, as a starting point, let's see what this gives us.
+Past performance is not an indicator of future performance. Nonetheless, we can see what past performance at today's CAPE levels would yield. We have earnings data up to the end of Q2 2017 and using that, we can compute CAPE and try the following impossibly naïve model: for a current CAPE value (for which we do not yet have returns data), take the 19 closest values in the past and average these to get a prediction. This is of course not how machine learning should be done. You should estimate parameters, do cross validation, etc. Still, as a starting point, let's see what this gives us.
 
 
 ![png](output_39_0.png)
@@ -162,7 +163,7 @@ When comparing stocks to bonds, our model thinks that bonds will outperform stoc
 
 And when looking at time horizons beyond 10 years, our model predicts that returns will converge to the warranted returns at the current level of CAPE.
 
-As I said earlier, I do not know anything about markets or investing, I just like exploring data. I'm not in a position to evaluate whether these predictions make sense at all, but they are what comes out of this simple model that builds on DeLong and Shiller's framework. I cannot offer any guidelines on how you should evaluate this information.
+As I said earlier, I do not know anything about markets or investing, I just like exploring data. I'm not in a position to evaluate whether these predictions make sense at all, but they are what comes out of this simple model that builds on DeLong and Shiller's framework. I cannot offer any guidelines on how you should appraise this information.
 
 # Conclusion and Epilogue
 
@@ -174,12 +175,12 @@ The basic CAPE + Warranted Returns model explored here is clearly a gross oversi
 
 Nonetheless, basic models can be useful as a tool for understanding, and for me as a outsider to the world of finance, this one does provide quite a bit of insight.
 
-I think it offers me some guidance for how I want to invest my money, but I read it as suggesting very different strategies depending on investment priorities. Anyway, I'm certainly not confident enough in my understanding to give others anything resembling investment advice, and, honestly, I put this exploration together for my 21-year-old self as much as for anyone else.
+I think it offers *me* some guidance for how I want to invest *my* money, but I read it as suggesting very different strategies depending on investment priorities. Anyway, I'm certainly not confident enough in my understanding to give others anything resembling investment advice, and, honestly, I put this exploration together for my 21-year-old self as much as for anyone else.
 
 The hidden irony here is that the motivation for finally investigating questions that had been bothering me for 20 years came from Brad DeLong's post. He provided the first interpretation of P/E ratios that I could understand. Brad DeLong's office is in Evans Hall, a building I spent time in almost every day for four years. If I had then deviated from my quotidian routine by a few floors, I might have been able to learn what I needed to know to answer my investment questions when they first came up, and not just 20 years later.
 
 I take this as a reminder to venture out a little bit and talk to people whose offices are a few floors above or below mine. This is advice I would not hesitate to give anyone.
 
-October 3, 2017
+October 19, 2017
 
 _Zürich, Switzerland_
